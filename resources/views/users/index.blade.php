@@ -6,6 +6,18 @@
     </x-slot>
 
     <div class="py-12">
-      {{$users}}
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            @foreach ($users as $user)
+            <tr>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
+            </tr>
+            @endforeach
+        </table>
     </div>
 </x-app-layout>
